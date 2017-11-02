@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AhorcadoRandom</title>
+  </head>
+  <body>
+
+    <script>
+
+
+    var resultado="";
+    var intentos=0;
+    var letraPedida="";
+    var salirbucle=false;
+
+
+    numeroAleatorio=Math.floor(Math.random()*(96-123+1)+123);
+    console.log(numeroAleatorio);
+
+    letraAleatoria= String.fromCharCode(numeroAleatorio);
+    console.log(letraAleatoria);
+
+    letraPedida=prompt("Dime una letra bb");
+    console.log(letraPedida);
+
+
+
+    if (letraPedida == letraPedida.toLowerCase()) {
+      resultado = "La letra es minuscula";
+
+    }else {
+      resultado="Mayusculas no valen";
+      alert("No valen las letras mayusculas");
+    }
+
+
+
+
+while (letraPedida!=letraAleatoria && intentos<5) {
+  letraPedida=prompt("Dime otra letra");
+  intentos++;
+}
+  if (letraPedida==letraAleatoria) {
+    document.write("Acertaste");
+    salirbucle=true;
+  }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
